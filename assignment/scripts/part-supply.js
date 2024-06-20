@@ -109,12 +109,17 @@ console.log('total parts', totalParts);
 //    how many boxes were filled.
 console.log('9. Filling boxes with a "while" loop');
 let parts = 572;
+let fillingBox = 0;
 let boxesFilled = 0;
-while (boxesFilled.isIneger()){
-  if ()
-  parts--;
-  boxesFilled += 1/7;
+while (parts > 0){
+  parts --;
+  fillingBox ++;
+  if (fillingBox == 7){
+  boxesFilled ++;
+  fillingBox = 0;
 }
+}
+parts = fillingBox
 console.log('parts left over', parts);
 console.log('boxes filled', boxesFilled);
 
