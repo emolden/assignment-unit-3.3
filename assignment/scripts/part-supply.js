@@ -114,7 +114,7 @@ let boxesFilled = 0;
 while (parts > 0){
   parts --;
   fillingBox ++;
-  if (fillingBox == 7){
+  if (fillingBox === 7){
   boxesFilled ++;
   fillingBox = 0;
 }
