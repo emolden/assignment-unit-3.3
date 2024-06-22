@@ -12,7 +12,7 @@ console.log('parts needed', partsNeeded);
 //    the following numbers: 3, 5, -6, 0, 7, 11.
 console.log('2. Create supplyChanges:');
 let supplyChanges = [3, 5, -6, 0, 7, 11];
-console.log ('supply changes', supplyChanges);
+console.log (`supply changes ${supplyChanges}`);
 
 // 3. Create a variable called 'secondItem' and assign it the value of the second
 //    item in the 'supplyChanges' array.
@@ -24,13 +24,13 @@ console.log ('second item', secondItem);
 //    Remove it from the array and store it inside a new variable called 'removedItem'.
 console.log('4. Remove the last value from supplyChanges:');
 let removedItem = supplyChanges[supplyChanges.length - 1];
-supplyChanges.pop();
+supplyChanges.pop(); //removes last item of array
 console.log('supply changes without 11', supplyChanges);
 console.log('removed item', removedItem);
 
 // 5. A delivery of 25 more parts arrived. Add the value 25 to the end of the array
 console.log('5. Add the value 25 into supplyChanges.');
-supplyChanges.push(25);
+supplyChanges.push(25); //adds item to end of array
 console.log('supply changes with 25', supplyChanges);
 
 // 6. Create three new variables named 'positives', 'negatives', and
@@ -44,15 +44,15 @@ console.log('6. Looping through supplyChanges to populate arrays with positive, 
 let positives = [];
 let negatives = [];
 let zeroes = [];
- for (let i=0; i < supplyChanges.length; i++ ){
-  if (supplyChanges[i] > 0){
-    positives.push(supplyChanges[i]);
+ for (let i=0; i < supplyChanges.length; i++ ){ //creates a new variable i starting at 0; the loop goes as long as i is less than the length of the array; i increases by one each loop
+  if (supplyChanges[i] > 0){ //checks to see if each item in the array is greater than 0
+    positives.push(supplyChanges[i]); //adds the item to the positive array if it is greater than zero
   }
-  else if (supplyChanges[i] < 0) {
-    negatives.push(supplyChanges[i]);
+  else if (supplyChanges[i] < 0) { //checks to see if each item in the array is less than zero
+    negatives.push(supplyChanges[i]); //adds the item to the negative array if it is less than zero
   }
   else {
-    zeroes.push(supplyChanges[i]);
+    zeroes.push(supplyChanges[i]); // adds all remaining items (zeros) to zeroes array
   }
  }
 
@@ -90,8 +90,8 @@ console.log('stretch positives', stretchPositives);
 //    array to the 'totalParts' variable.
 console.log('8. Looping through supplyChanges to calculate the sum:');
 let totalParts = 0;
-for (part of supplyChanges) {
-  totalParts += part;
+for (part of supplyChanges) { //create a new variable part that is equal to each item in supplyChanges array in each loop
+  totalParts += part; //add the value of each part, from supplyChanges array, to the totalParts on each loop
 }
 
 console.log('total parts', totalParts);
@@ -111,15 +111,15 @@ console.log('9. Filling boxes with a "while" loop');
 let parts = 572;
 let fillingBox = 0;
 let boxesFilled = 0;
-while (parts > 0){
-  parts --;
-  fillingBox ++;
-  if (fillingBox === 7){
-  boxesFilled ++;
-  fillingBox = 0;
+while (parts > 0){ //keep the loop going as long as parts are greater than zero
+  parts --; //decrease the amount of parts by one each loop
+  fillingBox ++; //increase the amount of fillingBox by one each loop
+  if (fillingBox === 7){ //if filling box is equal to 7(parts)
+  boxesFilled ++; //increase boxesFilled by one
+  fillingBox = 0; // and set fillingBox back to 0
+} // else to nothing
 }
-}
-parts = fillingBox
+parts = fillingBox //set parts equal to the number left in the last fillingBox that aren't enough to increase boxesFilled
 console.log('parts left over', parts);
 console.log('boxes filled', boxesFilled);
 
